@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Prediction Delai Conteneurs</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Segoe UI", Arial, sans-serif; background: #f4f6f9; color: #1f2937; }
+
+.layout { display: flex; min-height: 100vh; }
+
+.sidebar {
+  width: 230px; background: #111827; color: #e5e7eb;
+  display: flex; flex-direction: column; padding: 24px 0;
+}
+.sidebar h1 { font-size: 16px; padding: 0 20px 24px; color: #fff; }
+.sidebar nav a {
+  display: block; padding: 12px 20px; color: #9ca3af; text-decoration: none;
+  font-size: 14px; border-left: 3px solid transparent; cursor: pointer;
+}
+.sidebar nav a:hover { background: #1f2937; color: #fff; }
+.sidebar nav a.active { background: #1f2937; color: #fff; border-left-color: #3b82f6; }
+
+.main { flex: 1; padding: 32px; }
+.main h2 { font-size: 22px; margin-bottom: 20px; }
+
+.page { display: none; }
+.page.active { display: block; }
+</style>
+</head>
+<body>
+
+<div class="layout">
+  <div class="sidebar">
+    <h1>Conteneurs Port</h1>
+   <nav>
+  <a data-page="dashboard" class="active">Tableau de bord</a>
+  <a data-page="conteneurs">Conteneurs</a>
+  <a data-page="prediction">Prediction</a>
+  <a data-page="importateurs">Historique Importateurs</a>
+</nav>
+  </div>
+
+  <div class="main">
+    <div id="page-dashboard" class="page active">
+      <h2>Tableau de bord</h2>
+      <p>Contenu a venir...</p>
+    </div>
+
+    <div id="page-conteneurs" class="page">
+      <h2>Conteneurs</h2>
+      <p>Contenu a venir...</p>
+    </div>
+
+    <div id="page-prediction" class="page">
+      <h2>Nouvelle prediction</h2>
+      <p>Contenu a venir...</p>
+    </div>
+
+    <div id="page-importateurs" class="page">
+      <h2>Historique des importateurs</h2>
+      <p>Contenu a venir...</p>
+    </div>
+  </div>
+</div>
+
+<script>
+const liens = document.querySelectorAll(".sidebar nav a");
+liens.forEach(lien => {
+  lien.addEventListener("click", () => {
+    liens.forEach(l => l.classList.remove("active"));
+    lien.classList.add("active");
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    document.getElementById("page-" + lien.dataset.page).classList.add("active");
+  });
+});
+</script>
+
+</body>
+</html>

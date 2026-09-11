@@ -1,0 +1,15 @@
+﻿# Donnees brutes et intermediaires du pipeline ML (pas necessaires pour faire tourner l'app web)
+data/*.csv
+outputs/*.csv
+
+# Fichiers Python generes automatiquement
+__pycache__/
+*.pyc
+
+# Environnement
+.venv/
+venv/
+
+# Fichiers systeme
+.DS_Store
+Thumbs.db
