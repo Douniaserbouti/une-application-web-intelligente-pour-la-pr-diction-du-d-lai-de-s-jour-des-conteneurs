@@ -13,3 +13,4 @@ venv/
 # Fichiers systeme
 .DS_Store
 Thumbs.db
+webapp/backend/conteneurs.db
