@@ -1,4 +1,4 @@
-  1. Titre du stage
+ 
 
 Développement d'une application web intelligente pour la prédiction du délai de séjour des conteneurs au port à l'aide du Machine Learning
 
